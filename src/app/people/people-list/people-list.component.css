@@ -1,0 +1,13 @@
+.peopleListComponent{
+  margin-left: 200px;
+}
+
+#inputValue{
+  border: 1px solid black;
+  width: 400px;
+  line-height: 30px;
+}
+.employeeDetails{
+  border:1px solid black;
+}
+

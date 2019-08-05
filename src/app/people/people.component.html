@@ -1,0 +1,25 @@
+<div class="peopleComponent">
+
+  <div class="listOfPeople">
+    <div *ngFor="let emp of people">
+      <button class="btn btn-default btn-sm"(click)="getEmployeeDetails(emp)">{{emp.name}}</button>
+    </div>
+    <button (click)="createForm()">Create employee form</button>
+
+    <div *ngIf="addEmployee" class="addEmployee">
+      <h3>Create an employee form</h3>
+      <p><label>Enter Name of Employee: </label><input type="text" #empName></p>
+      <p><label>Enter Id of Employee: </label><input type="text" #empId></p>
+      <p><label>Enter location:  </label><input type="text" #empLocation></p>
+      <button type="submit" (click)="addDetails(empName, empId, empLocation )">Submit </button> &nbsp;&nbsp;&nbsp;&nbsp;
+      <button type="reset" (click)="formReset(empName, empId, empLocation)">Reset</button>
+    </div>
+  </div>
+
+
+  <div class="peopleDetails">
+    <app-people-list [peopleDetails]="details" (notify)="onNotify()"></app-people-list>
+  </div>
+
+</div>
+

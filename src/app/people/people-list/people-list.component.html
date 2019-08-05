@@ -1,0 +1,24 @@
+<div class="peopleListComponent">
+  <div class="listOfItems">
+    <label><b>Enter value to add a list:- </b> </label>
+    <input id="inputValue" type="text" #listItem (keyup.enter)="onAddItem(listItem)" placeholder="Enter any value">
+    <p *ngFor="let listItem of itemsArray"><input type="checkbox">{{listItem}}</p><br><br>
+
+    <button (click)="clear(listItem)">clear all</button>
+  </div>
+  <br><br>
+  <form class="employeeDetails">
+    <h3>Employee details</h3>
+    <h3>{{peopleDetails.name}} form</h3>
+    <p><label>{{peopleDetails.name}} Id:</label> {{peopleDetails.id}} </p>
+    <p><label>{{peopleDetails.name}} Location: </label>{{peopleDetails.location}}</p>
+    <p><label>{{peopleDetails.name}} Description:</label>{{peopleDetails.description}}</p>
+    <p><label>{{peopleDetails.name}} status:</label>{{peopleDetails.status}}</p>
+
+  </form>
+
+  <div>
+      <button (click)="notify.emit()">Notify me</button>
+  </div>
+</div>
+

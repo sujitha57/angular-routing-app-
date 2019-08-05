@@ -1,0 +1,59 @@
+<!--
+<div>
+  <p *ngFor="let project of projects">{{project.name}}</p>
+</div>
+-->
+
+<!--<label>Enter the post into the posts:-</label>
+<input (keyup.enter)="createPost(title)" #title
+       type="text" class="form-control">-->
+
+<button class="btn btn-primary"
+  (click)="createForm()">Create a form</button>
+
+<ul class="list-group">
+  <li *ngFor="let post of posts"
+      class="list-group-item">{{post.title}}
+    <button (click) = "updatePost(post)"
+      class="btn btn-default btn-sm">Update</button>
+    <button (click)="deletePost(post)"
+      class="btn btn-default btn-sm">Delete</button>
+  </li>
+</ul>
+
+
+<form *ngIf="status">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input #title
+           type="text" id="title" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="body">Body</label>
+    <input
+      id="body"
+      type="text"
+      class="form-control" #body>
+  </div>
+  <div class="form-group">
+    <label for="id">Id</label>
+    <input
+      id="id"
+      type="number"
+      class="form-control" #id>
+  </div>
+  <button class="btn btn-primary" type="submit" (click)="createPost(title, body, id)">Submit</button>
+</form>
+
+
+<div>
+  <button class="btn btn-primary" (click)="squaredValues()">Squared values</button>
+  <p>Square value of a number:{{squaredNums}}</p>
+  <p>Odd number from squares list:{{squaredOddValues}}</p>
+</div>
+
+<div>
+  <button class="btn btn-primary" (click)="getDetails()">get details</button>
+  <p *ngFor="let details of details">{{details.name}}</p>
+</div>
+

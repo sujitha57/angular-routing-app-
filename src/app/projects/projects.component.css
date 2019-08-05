@@ -1,0 +1,18 @@
+.form-control{
+  width: 500px;
+  line-height: 25px;
+  margin: 25px;
+}
+
+.list-group-item{
+  width: 670px;
+  /*border: 1px solid burlywood;
+  box-shadow: burlywood;*/
+}
+.btn-default{
+  float: right;
+}
+.list-group{
+  float: left;
+  margin-right: 50px;
+}

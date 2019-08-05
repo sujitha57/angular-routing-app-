@@ -1,0 +1,63 @@
+<div class="employees">
+  <ul class="list-group">
+    <li *ngFor="let emp of employees"
+        class="list-group-item" (click)="getEmpDetails(emp.id)">
+      <b>{{emp.employee_name}}</b>
+      <button class="btn btn-default btn-sm" (click)="updateEmp()"><b>Update</b></button>
+    </li>
+  </ul>
+  <div class="employee__name__age">
+      <button class="btn btn-default btn-sm"  (click)="getFirstName()">Get first name </button>
+    <P *ngIf="first === true">First person Name:- <b>{{empName}}</b> <br> First person age:-<b>{{empAge}}</b> First Name:- <b>{{fName}}</b></P>
+  </div>
+
+  <ul class="list-group" *ngIf="status === true">
+    <li class="list-group-item"><label><b>Employee Id: </b></label>{{empDetails.id}}</li>
+    <li class="list-group-item"><label><b>Employee name: </b></label>{{empDetails.employee_name}}</li>
+    <li class="list-group-item"><label><b>Employee age: </b></label>{{empDetails.employee_age}}</li>
+    <li class="list-group-item"><label><b>Employee salary: </b></label>{{empDetails.employee_salary}}</li>
+  </ul>
+</div>
+
+<div>
+  <form class="employeeForm">
+    <h4>Employee form</h4>
+    <div class="form-group">
+      <label for="fname">First name</label>
+      <input #fname
+             type="text" id="fname" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="lname">Last name</label>
+      <input
+        id="lname"
+        type="text"
+        class="form-control" #lname>
+    </div>
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input
+        id="id"
+        type="number"
+        class="form-control" #id>
+    </div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        id="username"
+        type="text"
+        class="form-control" #username>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        class="form-control" #password>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="createEmp(fname, lname, id, username, password)">Submit</button>
+  </form>
+</div>
+<!--<div class="updateDetails">
+  <button class="btn btn-default btn-sm" (click)="updateEmp()"><b>Update</b></button>
+</div>-->

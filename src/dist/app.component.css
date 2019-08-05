@@ -1,0 +1,3 @@
+.navbar .navbar-list{list-style-type:none;margin:0;padding:0;overflow:hidden;background-color:cornflowerblue}
+.navbar-list li{float:left}.navbar-list li a{display:block;color:white;text-align:center;padding:5px 100px 5px 20px;text-decoration:none}
+.navbar-list li a:hover{background-color:mediumblue}
